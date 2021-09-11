@@ -179,29 +179,33 @@ function changeToCountry() {
 
     // get the data from the json file EASTERN EUROPE NORTHERN AFRICA
     for(let i=0; i<data.length; i++) {
+        let color;
         if(data[i].Region == 'ASIA (EX. NEAR EAST)') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'yellow',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'yellow';
         } else if(data[i].Region == 'NEAR EAST') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'orange',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'orange';
         } else if(data[i].Region == 'NORTHERN AMERICA') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'lightblue',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'lightblue';
         } else if(data[i].Region == 'WESTERN EUROPE') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'cyan',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'cyan';
         } else if(data[i].Region == 'EASTERN EUROPE') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'red',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'red';
         } else if(data[i].Region == 'BALTICS') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'purple',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'purple';
         } else if(data[i].Region == 'C.W. OF IND. STATES') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'orange',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'orange';
         } else if(data[i].Region == 'NORTHERN AFRICA') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'beige',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'beige';
         } else if(data[i].Region == 'SUB-SAHARAN AFRICA') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'brown',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'brown';
         } else if(data[i].Region == 'LATIN AMER. & CARIB') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'gold',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'gold';
         } else if(data[i].Region == 'OCEANIA') {
-            addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  'lightgreen',  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+            color = 'black';
         }
+
+        addCountryCoord(earth, data[i].Country,  data[i].Languages,  data[i].latitude,  data[i].longitude,  color,  data[i].Region,  data[i].Population,  data[i].Area_sq_mi, data[i].GDP_per_capita, data[i].Climate);
+
     }
 }
 

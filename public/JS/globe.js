@@ -138,7 +138,7 @@ function render() {
 
 // Create and add coordinates for the globe
 function addCountryCoord(earth, country, language, latitude, longitude, color, region, population, area_sq_mi, gdp_per_capita, climate) {
-    let pointOfInterest = new THREE.SphereGeometry(.1, 32, 32);
+    let pointOfInterest = new THREE.SphereGeometry(.075, 32, 32);
     let lat = latitude * (Math.PI/180);
     let lon = -longitude * (Math.PI/180);
     let radius = 10;
